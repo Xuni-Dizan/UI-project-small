@@ -1,0 +1,104 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Nền sáng nhẹ nhàng */
+  }
+  
+  #content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #333;
+  }
+  
+  /* Overlay */
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85); /* Nền trắng nhẹ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeInBackground 2s ease-out forwards;
+  }
+  
+  /* Hiệu ứng nền khi logo đang hiển thị */
+  @keyframes fadeInBackground {
+    0% {
+      background-color: rgba(255, 255, 255, 0);
+    }
+    100% {
+      background-color: rgba(255, 255, 255, 0.85);
+    }
+  }
+  
+  /* Logo tối giản dựa trên chữ "D" */
+  #logo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Hình tròn làm nền cho logo */
+  .circle {
+    width: 100px;
+    height: 100px;
+    background-color: #FF6A00; /* Màu cam nổi bật */
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 2s ease-in-out infinite; /* Hiệu ứng nở rộng */
+  }
+  
+  /* Đoạn cong tạo ra cảm giác của chữ "D" */
+  .arc {
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    position: absolute;
+    bottom: 0;
+    animation: moveArc 3s ease-out infinite;
+  }
+  
+  /* Hiệu ứng nở rộng cho hình tròn */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Hiệu ứng chuyển động cho đoạn cong */
+  @keyframes moveArc {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
