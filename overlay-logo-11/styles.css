@@ -1,0 +1,124 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+}
+
+.logo-text {
+    display: flex;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-right: 30px;
+}
+
+.logo-text span {
+    display: inline-block;
+    position: relative;
+    animation: textMove 2s infinite alternate ease-in-out;
+}
+
+.logo-text .d, .logo-text .i, .logo-text .z, .logo-text .a, .logo-text .n {
+    position: relative;
+    animation: textRotateScale 2s infinite alternate ease-in-out;
+    animation-timing-function: ease-in-out;
+}
+
+/* Chuyển động cho từng chữ cái */
+.logo-text .d {
+    animation-delay: 0s;
+}
+
+.logo-text .i {
+    animation-delay: 0.2s;
+}
+
+.logo-text .z {
+    animation-delay: 0.4s;
+}
+
+.logo-text .a {
+    animation-delay: 0.6s;
+}
+
+.logo-text .n {
+    animation-delay: 0.8s;
+}
+
+/* Hiệu ứng di chuyển và thay đổi màu sắc chữ */
+@keyframes textMove {
+    0% {
+        transform: translateY(0);
+        color: black;
+    }
+    50% {
+        transform: translateY(-15px);
+        color: #2b8dff;
+    }
+    100% {
+        transform: translateY(0);
+        color: black;
+    }
+}
+
+/* Chuyển động xoay và thay đổi kích thước cho chữ */
+@keyframes textRotateScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(360deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Hiệu ứng quay cho biểu tượng */
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Thêm hiệu ứng ánh sáng chớp (glow effect) */
+@keyframes glowEffect {
+    0% {
+        text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #2b8dff, 0 0 30px #2b8dff, 0 0 40px #2b8dff, 0 0 50px #2b8dff;
+    }
+    50% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 5px #00f, 0 0 10px #00f, 0 0 15px #00f, 0 0 20px #2b8dff, 0 0 30px #2b8dff, 0 0 40px #2b8dff, 0 0 50px #2b8dff;
+    }
+}
+
+/* Áp dụng hiệu ứng glow cho logo */
+.logo-text {
+    animation: glowEffect 2s infinite alternate;
+}
+
+/* Hiệu ứng quay biểu tượng */
+.logo-icon {
+    animation: rotateIcon 6s infinite linear;
+}

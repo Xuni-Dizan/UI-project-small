@@ -1,0 +1,73 @@
+/* Thiết lập nền trang */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1A1A1A; /* Màu nền tối */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Logo */
+.logo {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotateLoop 5s infinite linear;
+}
+
+/* Vòng tròn tạo hình chữ D */
+.circle {
+    width: 100px;
+    height: 100px;
+    border: 10px solid #00F5A0; /* Màu sáng */
+    border-radius: 50%;
+    position: absolute;
+    animation: pulse 2s infinite alternate; /* Tạo hiệu ứng nở ra */
+}
+
+/* Đoạn đường thẳng tạo thành chữ D */
+.line {
+    width: 50px;
+    height: 10px;
+    background-color: #00F5A0;
+    position: absolute;
+    top: 20px;
+    left: 25px;
+    animation: moveLine 2s infinite alternate; /* Chuyển động cho đường thẳng */
+}
+
+/* Hiệu ứng chuyển động vòng lặp cho logo */
+@keyframes rotateLoop {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hiệu ứng "nở" cho vòng tròn */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+/* Hiệu ứng chuyển động cho đường thẳng */
+@keyframes moveLine {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(10px);
+    }
+}

@@ -1,0 +1,157 @@
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Màu nền tối để làm nổi bật logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    position: relative;
+}
+
+.logo-text {
+    display: flex;
+    font-weight: 900;
+    color: #f0f0f0; /* Màu chữ sáng */
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    margin-right: 20px;
+}
+
+.logo-text span {
+    display: inline-block;
+    position: relative;
+    animation: textMove 2s infinite ease-in-out;
+}
+
+.logo-text .d {
+    animation-delay: 0s;
+}
+
+.logo-text .i {
+    animation-delay: 0.2s;
+}
+
+.logo-text .z {
+    animation-delay: 0.4s;
+}
+
+.logo-text .a {
+    animation-delay: 0.6s;
+}
+
+.logo-text .n {
+    animation-delay: 0.8s;
+}
+
+/* Chuyển động 3D cho biểu tượng */
+@keyframes rotateIcon {
+    0% {
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+    100% {
+        transform: rotate3d(1, 1, 0, 360deg);
+    }
+}
+
+/* Áp dụng hiệu ứng quay 3D cho biểu tượng */
+.logo-icon {
+    animation: rotateIcon 6s infinite linear;
+}
+
+/* Định dạng vòng tròn ngoài và các đường nối */
+.outer-circle {
+    fill: none;
+    stroke: #FF00FF; /* Màu neon tím để tạo cảm giác công nghệ */
+    stroke-width: 2;
+    animation: pulseEffect 2s infinite ease-in-out;
+}
+
+.inner-circle {
+    fill: none;
+    stroke: #00FF99; /* Màu xanh neon */
+    stroke-width: 2;
+    animation: pulseEffect 3s infinite ease-in-out;
+}
+
+.core-circle {
+    fill: #FF00FF; /* Màu neon tím cho lõi */
+}
+
+/* Các đường nối mạch */
+.line {
+    fill: none;
+    stroke: #00FF99;
+    stroke-width: 2;
+    opacity: 0.8;
+    animation: linePulse 2s infinite ease-in-out;
+}
+
+.top, .bottom {
+    animation-duration: 4s;
+}
+
+.left, .right {
+    animation-duration: 3s;
+}
+
+/* Hiệu ứng cho các đường mạch */
+@keyframes linePulse {
+    0%, 100% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Hiệu ứng "pulse" cho vòng ngoài và vòng trong */
+@keyframes pulseEffect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Phóng to nhẹ */
+    }
+}
+
+/* Các điểm nối */
+.dot {
+    fill: #00FF99; /* Màu điểm nối sáng neon */
+    animation: dotGlow 2s infinite ease-in-out;
+}
+
+@keyframes dotGlow {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Làm cho điểm nối sáng lên */
+    }
+}
+
+
+/* Hiệu ứng ánh sáng neon */
+@keyframes glowEffect {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 255, 153, 0.8), 0 0 20px rgba(0, 255, 153, 0.6), 0 0 30px rgba(0, 255, 153, 0.4);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 255, 153, 1), 0 0 40px rgba(0, 255, 153, 0.8), 0 0 50px rgba(0, 255, 153, 0.6);
+    }
+}
+
+/* Áp dụng hiệu ứng ánh sáng neon cho chữ */
+.logo-text {
+    animation: glowEffect 3s infinite ease-in-out;
+}

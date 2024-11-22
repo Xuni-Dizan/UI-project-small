@@ -1,0 +1,127 @@
+/* Reset các thuộc tính mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #0f0f0f; /* Nền tối để làm nổi bật logo */
+  }
+  
+  /* Hiện thị nội dung sau khi overlay biến mất */
+  #content {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Nền overlay đen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeInBackground 2s ease-out forwards;
+  }
+  
+  /* Hiệu ứng nền khi logo đang hiển thị */
+  @keyframes fadeInBackground {
+    0% {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    100% {
+      background-color: rgba(0, 0, 0, 0.85);
+    }
+  }
+  
+  /* Tạo hình dáng chữ "D" theo kiểu hình học và hiện đại */
+  #logo {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotateLogo 5s ease-out infinite;
+  }
+  
+  .d-shape {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    background-color: #FFD700; /* Màu vàng kim */
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.8), 0 0 80px rgba(255, 215, 0, 0.5);
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  .d-shape .inner {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 90px;
+    height: 90px;
+    background-color: #000;
+    border-radius: 50%;
+  }
+  
+  .d-shape .arc {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 60px;
+    background-color: #FFD700;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    animation: arcMove 3s ease-out infinite;
+  }
+  
+  /* Hiệu ứng nở rộng của logo */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Hiệu ứng xoay của logo */
+  @keyframes rotateLogo {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Hiệu ứng chuyển động của đoạn cong */
+  @keyframes arcMove {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  

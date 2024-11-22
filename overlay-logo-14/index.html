@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Dizan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo-text">
+            <span class="d">D</span>
+            <span class="i">I</span>
+            <span class="z">Z</span>
+            <span class="a">A</span>
+            <span class="n">N</span>
+        </div>
+        <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="120" height="120">
+                <!-- Các đường kẻ mạch điện và điểm nối -->
+                <circle class="outer-circle" cx="50" cy="50" r="45" />
+                <circle class="inner-circle" cx="50" cy="50" r="35" />
+                <circle class="core-circle" cx="50" cy="50" r="10" />
+                
+                <!-- Các đường nối - Để mô phỏng một mạng lưới -->
+                <path class="line top" d="M 50 5 L 50 50" />
+                <path class="line bottom" d="M 50 50 L 50 95" />
+                <path class="line left" d="M 5 50 L 50 50" />
+                <path class="line right" d="M 50 50 L 95 50" />
+                
+                <!-- Các điểm nối -->
+                <circle class="dot top-left" cx="10" cy="10" r="4" />
+                <circle class="dot top-right" cx="90" cy="10" r="4" />
+                <circle class="dot bottom-left" cx="10" cy="90" r="4" />
+                <circle class="dot bottom-right" cx="90" cy="90" r="4" />
+            </svg>
+        </div>
+    </div>
+</body>
+</html>
