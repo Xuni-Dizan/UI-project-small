@@ -1,0 +1,22 @@
+/* Thiết lập giao diện trang web chỉ với chữ ký */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Màu nền nhẹ nhàng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Chiếm toàn bộ chiều cao màn hình */
+    overflow: hidden; /* Giấu phần cuộn */
+}
+
+/* Cấu hình phần footer chứa chữ ký */
+.footer-signature {
+    width: 400px;
+    height: 400px;
+    position: relative; /* Đảm bảo phần tử chứa có thể căn giữa */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
